@@ -206,7 +206,9 @@
   }
   window.addEventListener('message',e=>{
     let host; try {host=new URL(e.origin).hostname;}catch(_){return;}
-    if (e.origin!==`https://${host}` || !(host==='script.google.com'||host==='script.googleusercontent.com'||host.endsWith('.script.googleusercontent.com'))) return;
+    // Apps Script sandbox hosts can use a hyphen before "script", not a dot.
+    const googleSandbox = host==='script.googleusercontent.com' || host.endsWith('.script.googleusercontent.com') || host.endsWith('-script.googleusercontent.com');
+    if (e.origin!==`https://${host}` || !(host==='script.google.com'||googleSandbox)) return;
     const d=e.data;
     if (!state.pending || !d || d.type!=='XM_SUBMISSION_RESULT' || d.nonce!==activeNonce || d.submissionId!==state.submissionId) return;
     clearTimeout(timer);busy=false;
