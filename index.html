@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta name="description" content="ارزیابی شایستگی‌های مدیریت تجربه، ویژهٔ ایران">
+  <title>ارزیابی مدیریت تجربه | XMGlobal Collaborative</title>
+  <link rel="icon" href="assets/xmglobal.webp" type="image/webp">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="config.js"></script>
+  <script defer src="data.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">رفتن به پرسشنامه</a>
+  <header class="header"><div class="brand"><img src="assets/xmglobal.webp" alt="XMGlobal Collaborative" width="249" height="100"><div class="brand-title">پژوهش مدیریت تجربه در ایران<span>ارزیابی شایستگی‌های سازمانی XM</span></div><img class="crm-logo" src="assets/crmroom.webp" alt="اتاق مدیریت ارتباط با مشتری — CRMROOM" width="140" height="140"></div></header>
+  <div class="shell">
+    <div id="connection-note" class="notice" hidden>نسخهٔ پیش‌نمایش: اتصال به Google Sheets هنوز تنظیم نشده است؛ ثبت نهایی فعال نیست.</div>
+    <section class="progress-panel" aria-label="پیشرفت پرسشنامه"><div class="progress-meta"><span id="step-label"></span><span id="progress-label"></span></div><progress id="progress" max="100" value="0"></progress><div id="step-list" class="step-list" aria-hidden="true"></div></section>
+    <main id="main" tabindex="-1"></main>
+    <div id="status" class="status" role="status" aria-live="polite"></div>
+    <nav id="navigation" class="navigation" aria-label="پیمایش پرسشنامه"><button id="previous" class="secondary" type="button">مرحلهٔ قبل</button><button id="save" class="quiet" type="button">ذخیرهٔ پیش‌نویس</button><button id="next" class="primary" type="button">شروع پرسشنامه ←</button></nav>
+    <footer><p>پاسخ‌ها محرمانه‌اند و فقط در اختیار تیم مجاز پژوهش قرار می‌گیرند.</p><p>تماس: <a href="mailto:tom.dewitt@xmgc.org" dir="ltr">tom.dewitt@xmgc.org</a></p><button id="clear" class="text-button" type="button">پاک‌کردن پیش‌نویس از این مرورگر</button></footer>
+  </div>
+  <dialog id="guide-dialog" aria-labelledby="guide-title"><div class="dialog-heading"><h2 id="guide-title">راهنمای مقیاس‌ها</h2><button id="close-guide" type="button" class="secondary" aria-label="بستن راهنما">بستن ×</button></div><div id="guide-content"></div></dialog>
+  <iframe title="کانال امن دریافت رسید ثبت" name="submit-frame" id="submit-frame" hidden></iframe>
+  <form id="transport" method="post" target="submit-frame" hidden><input name="payload" id="payload" type="hidden"></form>
+  <noscript><p class="notice">برای تکمیل پرسشنامه، جاوااسکریپت مرورگر را فعال کنید.</p></noscript>
+</body>
+</html>
